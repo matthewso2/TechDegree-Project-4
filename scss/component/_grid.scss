@@ -1,0 +1,155 @@
+// ========================
+// Grid
+// =======================
+
+.container {
+    padding: 0 10px;
+    @include mq('med') {
+        max-width: 1400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.centered {
+    @include mq('med') {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 10px;
+    @include mq('med') {
+        flex-direction: row;
+    }
+}
+
+[class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: 5px; 
+    @include mq('med') {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        align-items: center;  
+    }
+    + [class^=col] {
+        @include mq('med') {
+        margin-left: 10px;
+        }
+    }
+}
+
+.theme.col {
+    &-1 {
+        background-color: $color-info;
+    }
+    &-2 {
+        background-color: $color-warning;
+    }
+    &-3 {
+        background-color: #deb2ee;
+    }
+    &-4 {
+        background-color: #7ee6fd;
+    }
+    &-5 {
+        background-color: #88d9a0;
+    }
+    &-6 {
+        background-color: #4da2bb;
+    }
+    &-7 {
+        background-color: #ec9fa3;
+    }
+    &-8 {
+        background-color: #fd9f85;
+    }
+    &-9 {
+        background-color: $color-error;
+    }
+    &-10 {
+        background-color: $color-success;
+    }
+    &-11 {
+        background-color: $color-primary;
+    }
+    &-12 {
+        background-color: #80e8d1;
+    }
+}
+
+.col {
+    &-1 {
+        @include mq('med') {
+            flex-basis: 8.33%;
+        }
+    }
+    &-2 {
+        @include mq('med') {
+            flex-basis: 16.67%;
+        }
+    }
+    &-3 {
+        @include mq('med') {
+            flex-basis: 25.00%;
+        }
+    }
+    &-4 {
+        @include mq('med') {
+            flex-basis: 33.33%;
+        }
+    }
+    &-5 {
+        @include mq('med') {
+            flex-basis: 41.67%;
+        }
+    }
+    &-6 {
+        @include mq('med') {
+            flex-basis: 50.00%;
+        }
+    }
+    &-7 {
+        @include mq('med') {
+            flex-basis: 58.33%;
+        }
+    }
+    &-8 {
+        @include mq('med') {
+            flex-basis: 66.67%;
+        }
+    }
+    &-9 {
+        @include mq('med') {
+            flex-basis: 75.00%
+        }
+    }
+    &-10 {
+        @include mq('med') {
+            flex-basis: 83.33%;
+        } 
+    }
+    &-11 {
+        @include mq('med') {
+            flex-basis: 91.67%;
+        }
+    }
+    &-12 {
+        @include mq('med') {
+            flex-basis: 100%;
+        }
+    }
+}
+
+.card {
+    flex-basis: 100%;
+}

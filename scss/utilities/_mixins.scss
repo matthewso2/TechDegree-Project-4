@@ -1,0 +1,9 @@
+// Media Queries
+@mixin mq($break) {
+    
+    @if $break == 'med' {
+        @media (min-width: $break-m) {
+            @content;
+        }
+    } 
+}
